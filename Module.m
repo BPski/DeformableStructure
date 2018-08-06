@@ -1,4 +1,4 @@
-classdef module
+classdef Module
     %define the modules of a structure
     %the two plates and the links between them
     %for this they are allowed to be general asymmetric modules
@@ -28,7 +28,7 @@ classdef module
     end
 
     methods
-        function obj=module(r_up,r_down,theta_up,theta_down,links)
+        function obj=Module(r_up,r_down,theta_up,theta_down,links)
             %initialize the object, main objective is to determine delta
             %when undeformed
 
@@ -48,7 +48,7 @@ classdef module
             obj.theta_up = reshape(theta_up,n,1);
             obj.theta_down = reshape(theta_down,n,1);
 
-            obj.g = configuration();
+            obj.g = Configuration();
 
             %setup the links
             obj.links = links; %this is a cell array, very important
@@ -148,7 +148,7 @@ classdef module
 
         function obj = set.g(obj,val)
             %set the delta in g
-            if isa(val,'configuration') %gave a config 
+            if isa(val,'Configuration') %gave a config 
                 obj.g = val;
             elseif length(val) ~= 6 %gave a delta
                 error("delta requires 6 items to specify g [3x angles, 3x displacements]")

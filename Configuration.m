@@ -1,4 +1,4 @@
-classdef configuration
+classdef Configuration
     %a representation for a homogenerous transformation
     %gives some convenient shorthand
     
@@ -7,7 +7,7 @@ classdef configuration
     end
     
     methods
-        function obj = configuration(val)
+        function obj = Configuration(val)
             %can be initialized either with the displacements or with a
             %matrix
            

@@ -1,4 +1,4 @@
-classdef structure
+classdef Structure
     %a structure is a collection of modules in series
     %this is for keeping everything well presented an bound together
     %between the modules
@@ -8,7 +8,7 @@ classdef structure
     end
     
     methods
-        function obj = structure(modules)
+        function obj = Structure(modules)
             %constructor now just takes a list of predefined modules 
             %the structure class is then just keeping them organized
             
