@@ -36,7 +36,7 @@ classdef Structure
             %plot each module seperately
             %have to increment the offset for each one
             hold on
-            offset = configuration();
+            offset = Configuration();
             
             for i=1:length(obj.modules)
                 plot(obj.modules(i),offset);
@@ -130,7 +130,7 @@ classdef Structure
             
             %kinda weird at this point the checking of the arguments
             if nargin ~=5
-                file = 'cableDeformationAnimation.gif';
+                file = 'animations/cableDeformationAnimation.gif';
             end
             
             

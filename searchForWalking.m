@@ -39,7 +39,7 @@ function out = searchForWalking()
                 %save them
                 %store the combination index for the base and the top to
                 %recall it later
-                file = ['walkAnimation',num2str(n),'_',num2str(i),'_',num2str(j),'.gif']
+                file = ['animations/','walkAnimation',num2str(n),'_',num2str(i),'_',num2str(j),'.gif']
                 s.minimizeEnergyCableConstraint(s.cableLength(0,0)-0.05,0.0,0,file);
             end
         end

@@ -95,10 +95,10 @@ classdef Module
 
             if nargin == 1 %no offset specified
                 g_off = configuration();
-            elseif isa(offset,'configuration') %gave a configuration
+            elseif isa(offset,'Configuration') %gave a configuration
                 g_off = offset;
             elseif length(offset) == 6 %gave a delta
-                g_off = configuration(offset);
+                g_off = Configuration(offset);
             else
                 error("not sure what to do with the specified offset");
             end

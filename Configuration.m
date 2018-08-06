@@ -64,8 +64,8 @@ classdef Configuration
             if all(size(r) == [3,1])
                 v = obj.M*[r;1]; %could have issues if the vector is not "free"
                 res = v(1:3);
-            elseif isa(r,'configuration') %retain configuration between configurations
-                res = configuration(obj.M*r.M);
+            elseif isa(r,'Configuration') %retain configuration between configurations
+                res = Configuration(obj.M*r.M);
             else
                 res = obj.M*r;
             end
