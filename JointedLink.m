@@ -17,7 +17,7 @@ classdef JointedLink < Link
             %assuming b_up=b_down=B
 %             if length(top) ~= 3 || length(bottom) ~= 3
 %                 %make sure defined in 3D
-%                 error("link expects positions to be 3D");
+%                 error('link expects positions to be 3D');
 %             end
             
             init_length = sqrt(2*B^2*(1-cos(beta0)));
@@ -37,14 +37,14 @@ classdef JointedLink < Link
 %         
 %         function obj = set.top(obj,val)
 %             if length(val) ~= 3
-%                 error("top position of link needs to be in 3D")
+%                 error('top position of link needs to be in 3D')
 %             end
 %             obj.top = reshape(val,3,1);
 %         end
 %         
 %         function obj = set.bottom(obj,val)
 %             if length(val) ~= 3
-%                 error("bottom position of link needs to be in 3D")
+%                 error('bottom position of link needs to be in 3D')
 %             end
 %             obj.bottom = reshape(val,3,1);
 %         end

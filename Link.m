@@ -47,14 +47,14 @@ classdef Link
         
         function obj = set.top(obj,val)
             if length(val) ~= 3
-                error("top position of link needs to be in 3D")
+                error('top position of link needs to be in 3D')
             end
             obj.top = reshape(val,3,1);
         end
         
         function obj = set.bottom(obj,val)
             if length(val) ~= 3
-                error("bottom position of link needs to be in 3D")
+                error('bottom position of link needs to be in 3D')
             end
             obj.bottom = reshape(val,3,1);
         end

@@ -21,13 +21,13 @@ classdef Configuration
                 elseif m == 4 && n == 4 %specified a matrix
                     %check entries
                     if any([0,0,0,1]~=val(4,:)) %doesn't have the right shape
-                        error("if specifying a matrix it is expected that the matrix looks like [R(3x3), p(3x1); 0(1x3), 1]")
+                        error('if specifying a matrix it is expected that the matrix looks like [R(3x3), p(3x1); 0(1x3), 1]')
                     end
                     %minus sign because the R and extractAngles seem to be
                     %opposite each other
                     obj.delta = [-extractAngles(val(1:3,1:3));val(1:3,4)];
                 else
-                    error("do not recognize how to make configuration from the entry, either need 6x1 or 4x4");
+                    error('do not recognize how to make configuration from the entry, either need 6x1 or 4x4');
                 end
             end
         end
@@ -75,7 +75,7 @@ classdef Configuration
             if all(size(val)==[6,1]) || all(size(val)==[1,6])
                 obj.delta = reshape(val,6,1);
             else
-                error("delta needs to be set as a 6x1 vector [3x angles, 3x displacements]");
+                error('delta needs to be set as a 6x1 vector [3x angles, 3x displacements]');
             end
         end
     end

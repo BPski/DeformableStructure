@@ -37,7 +37,7 @@ classdef Module
 
             n = length(r_up);
             if any([length(r_down),length(theta_up),length(theta_down)] ~= n)
-                error("not all properties specified are consistent");
+                error('not all properties specified are consistent');
             end
 
             %setting the known properties and making sure they are in the
@@ -94,13 +94,13 @@ classdef Module
             %draw the module
 
             if nargin == 1 %no offset specified
-                g_off = configuration();
+                g_off = Configuration();
             elseif isa(offset,'Configuration') %gave a configuration
                 g_off = offset;
             elseif length(offset) == 6 %gave a delta
                 g_off = Configuration(offset);
             else
-                error("not sure what to do with the specified offset");
+                error('not sure what to do with the specified offset');
             end
             
             top = [];
@@ -151,7 +151,7 @@ classdef Module
             if isa(val,'Configuration') %gave a config 
                 obj.g = val;
             elseif length(val) ~= 6 %gave a delta
-                error("delta requires 6 items to specify g [3x angles, 3x displacements]")
+                error('delta requires 6 items to specify g [3x angles, 3x displacements]')
             else
                 obj.g.delta = val;
             end
@@ -192,7 +192,7 @@ classdef Module
                     out = out + obj.links{i}.energy;
                 end
             else
-                error("the provided name is not recognized");
+                error('the provided name is not recognized');
             end
         end
 

@@ -130,7 +130,10 @@ classdef Structure
             
             %kinda weird at this point the checking of the arguments
             if nargin ~=5
-                file = 'animations/cableDeformationAnimation.gif';
+                if 7 ~= exist('animations') %check for an animations folder
+                    mkdir 'animations';
+                end
+                file = './animations/cableDeformationAnimation.gif';
             end
             
             
